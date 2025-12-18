@@ -1,9 +1,9 @@
 ---
-title: "Welcome"
+title: "Maths Extension 2"
 description: "Your documentation starts here."
 ---
 
-# Hello, docmd!
+# Maths Extension 2
 
 Start writing your Markdown content here.
 

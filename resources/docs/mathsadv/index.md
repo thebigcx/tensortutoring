@@ -1,14 +1,8 @@
 ---
-title: "Welcome"
+title: "Maths Advanced"
 description: "Your documentation starts here."
 ---
 
-# Hello, docmd!
+# Maths Advanced
 
-Start writing your Markdown content here.
-
-## Test
-
-## TEst2 
-
-### Test3
+- [Why are integrals and derivatives inverses of each other?](./intdifinverse)

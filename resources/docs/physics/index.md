@@ -1,14 +1,8 @@
 ---
-title: "Welcome"
+title: "Physics"
 description: "Your documentation starts here."
 ---
 
-# Hello, docmd!
+# Physics
 
-Start writing your Markdown content here.
-
-## Test
-
-## TEst2 
-
-### Test3
+- [Life Cycle of a Star: Summary](./starlifesummary)

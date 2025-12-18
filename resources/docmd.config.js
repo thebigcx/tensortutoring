@@ -119,7 +119,7 @@ module.exports = {
         collapsible: true, // This makes the menu section collapsible
 
         children: [
-          
+          { title: 'Life Cycle of a Star: Summary', path: '/physics/starlifesummary', icon: '' }
         ]
       },
       {
@@ -129,7 +129,7 @@ module.exports = {
         collapsible: true, // This makes the menu section collapsible
 
         children: [
-
+          { title: 'Welding', path: '/engineering/welding', icon: '' }
         ]
       },
       {
@@ -139,7 +139,7 @@ module.exports = {
         collapsible: true, // This makes the menu section collapsible
 
         children: [
-
+          { title: 'Fundamental Theorem of Calculus', path: '/mathsadv/intdifinverse', icon: '' }
         ]
       },
       {
@@ -149,7 +149,7 @@ module.exports = {
         collapsible: true, // This makes the menu section collapsible
 
         children: [
-          
+          { title: 'u-substitution', path: '/mathsext1/usub', icon: '' }
         ]
       },
       {

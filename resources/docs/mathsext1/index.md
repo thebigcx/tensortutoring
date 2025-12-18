@@ -1,14 +1,8 @@
 ---
-title: "Welcome"
+title: "Maths Extension 1"
 description: "Your documentation starts here."
 ---
 
-# Hello, docmd!
+# Maths Extension 1
 
-Start writing your Markdown content here.
-
-## Test
-
-## TEst2 
-
-### Test3
+- [How to do a u-substitution](./usub)
