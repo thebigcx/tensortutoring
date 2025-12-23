@@ -38,14 +38,14 @@
                             <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
                             <li class="nav-item"><a class="nav-link" href="/pricing.html">Enrol</a></li>
                             <li class="nav-item"><a class="nav-link" href="/faq.html">FAQ</a></li>
-                            <li class="nav-item"><a class="btn btn-outline-success" href="/resources/index.html">Resources</a></li>
-                            <!--<li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" style="color: var(--bs-success);" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Free Resources</a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                                    <li><a class="dropdown-item" href="resources/index.html">Blog Home</a></li>
-                                    <li><a class="dropdown-item" href="blog-post.html">Blog Post</a></li>
+                                    <li><a class="dropdown-item" href="resources/index.html">Highest-Yield</a></li>
+                                    <li><a class="dropdown-item" href="quiz.html">Quizzes</a></li>
+                                    <li><a class="dropdown-item" href="resources/site">All Resources</a></li>
                                 </ul>
-                            </li>-->
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -65,41 +65,52 @@
                                     <label id="question">                                        
                                     </label>
 
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text">
-                                                <input type="radio" id="answer-a-input" name="question" value="credit_card">
-                                                <label for="answer-a-input"> &nbsp; A. <span id="answer-a-content"></span></label><br>
+                                    <div class="input-group m-1">
+                                        <label for="answer-a-input">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text" id="a-div">
+                                                    <input type="radio" id="answer-a-input" name="question" value="credit_card">
+                                                    &nbsp; A. &nbsp; <span id="answer-a-content"></span><br>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </label>
                                     </div>
 
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text">
-                                                <input type="radio" id="answer-b-input" name="question" value="paypal">
-                                                <label for="answer-b-input"> &nbsp; B. <span id="answer-b-content"></span></label><br>
+                                    <div class="input-group m-1">
+                                        <label for="answer-b-input">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text" id="b-div">
+                                                    <input type="radio" id="answer-b-input" name="question" value="paypal">
+                                                    &nbsp; B. &nbsp; <span id="answer-b-content"></span><br>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </label>
                                     </div>
 
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text">
-                                                <input type="radio" id="answer-c-input" name="question" value="cash" checked>
-                                                <label for="answer-c-input"> &nbsp; C. <span id="answer-c-content"></span></label><br>
+                                    <div class="input-group m-1">
+                                        <label for="answer-c-input">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text" id="c-div">
+                                                    <input type="radio" id="answer-c-input" name="question" value="cash" checked>
+                                                    &nbsp; C. &nbsp; <span id="answer-c-content"></span><br>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </label>
                                     </div>
 
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text">
-                                                <input type="radio" id="answer-d-input" name="question" value="cash" checked>
-                                                <label for="answer-d-input"> &nbsp; D. <span id="answer-d-content"></span></label>
+                                    <div class="input-group m-1">
+                                        <label for="answer-d-input">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text" id="d-div">
+                                                    <input type="radio" id="answer-d-input" name="question" value="cash" checked>
+                                                    &nbsp; D. &nbsp; <span id="answer-d-content"></span>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </label>
                                     </div>
+
+                                    <a class="btn btn-outline-primary" onclick="check_answer()">Submit</a>
+                                    <a class="btn btn-outline-primary" onclick="new_question()">Next</a>
                                 </form>
                             </div>
                         </div>
