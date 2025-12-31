@@ -46,6 +46,7 @@ module.exports = {
   customJs: [  // Array of paths to custom JS files, loaded at end of body
     // '/assets/js/custom-script.js', // Paths relative to outputDir root
     '/assets/js/docmd-image-lightbox.js', // Image lightbox functionality
+    '/assets/js/mathjax_inline_setup.js',
     '/assets/js/mathjax.js'
   ],
 

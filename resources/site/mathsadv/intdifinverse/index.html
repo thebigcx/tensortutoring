@@ -370,7 +370,34 @@
             <div class="content-layout">
                 <div class="main-content">
                     <h1 id="why-are-integrals-and-derivatives-inverses-of-each-other">Why are integrals and derivatives inverses of each other?</h1>
-<p>Coming soon!</p>
+<p>A fact that every student learning calculus will undoubtedly hear, helping to bridge the gap between the 2 branches of differentiation and integration. It contextualises every technique learnt. But why is it true? How do we visualise it outside of abstract proofs?</p>
+<p>$$F(x) = \int_a^x{f(t)dt}$$</p>
+<h2 id="car-analogy">Car Analogy</h2>
+<p>Perhaps the easiest explanation is one involving a somewhat ________ situation. Consider that you are driving along a highway, and would like to know how far you have travelled in a particular time period. For this situation, there are no street signs or navigation systems - only the dashboard in front of you.</p>
+<p>So let’s say every 10 seconds you look at your speed. In that 10 seconds, we can calculate how far you would have travelled:</p>
+<p>$$<br>
+v = \frac{d}{\Delta t}\\<br>
+d = v\Delta t<br>
+$$</p>
+<p>But that’s only for ten seconds. We would need to sum up all the time intervals to get a total distance:</p>
+<p>$$<br>
+d_{tot} = \sum v\Delta t<br>
+$$</p>
+<p>Great, now we have an estimate for the total distance. But this estimate isn’t very good; it assumes our speed is constant within the 10 second intervals. But a lot can happen in that time; we can speed up to overtake, slow down for traffic, etc. So we should try to reduce the time interval as much as possible. We know that within calculus, this is modelled as a <strong>limit</strong>. Thus we could express our total distance as:</p>
+<p>$$<br>
+d_{tot} = \lim\limits_{\Delta t\to 0} \sum v\Delta t<br>
+$$</p>
+<p>What we have is just integration from first principles. Thus we can replace it with:</p>
+<p>$$<br>
+d_{tot} = \int v\ dt<br>
+$$</p>
+<p>And therefore, distance is the integral of velocity with respect to time. We know that velocity is the derivative of distance with respect to time, so we have proven that indeed derivatives and integrals are inverses.</p>
+<h2 id="a-way-to-visualise-it">A way to visualise it</h2>
+<p>We can flesh this out with a bit of visualisation. Imagine what would happen if you speed up by $5\ m/s$ instantaneously, from $5\ m/s$ to $10\ m/s$. The $v(t)$ graph would sharply increase. But your distance travelled would not sharply increase; rather, for every second after this change, your distance will increase by 10 m, rather than 5 m. In other words, the <strong>slope</strong> of the distance graph will increase. This makes sense as the <em>area under the curve</em> of the velocity graph does not sharply increase at this point; it just increases faster than it did before.</p>
+<p><strong>Velocity</strong><br>
+<img src="../../assets/images/velocity_graph.png" alt=""></p>
+<p><strong>Distance</strong><br>
+<img src="../../assets/images/distance_graph.png" alt=""></p>
 
                     
                     
@@ -404,11 +431,29 @@
                     
                 </div>
                 
-                <!-- DEBUG: {"headingsLength":1} -->
+                <!-- DEBUG: {"headingsLength":3} -->
                 
                 <!-- TOC sidebar -->
                 <div class="toc-sidebar">
                     
+
+  <div class="toc-container">
+    <h2 class="toc-title">On This Page<span class="mobile-view toc-menu-button float-right"><svg class="lucide-icon icon-chevrons-down-up" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m7 20 5-5 5 5" />
+  <path d="m7 4 5 5 5-5" />
+</svg></span></h2>
+    <ul class="toc-list">
+      
+        <li class="toc-item toc-level-2">
+          <a href="#car-analogy" class="toc-link">Car Analogy</a>
+        </li>
+      
+        <li class="toc-item toc-level-2">
+          <a href="#a-way-to-visualise-it" class="toc-link">A way to visualise it</a>
+        </li>
+      
+    </ul>
+  </div>
  
                 </div>
             </div>
@@ -473,6 +518,8 @@
 
     
       <script src="../../assets/js/docmd-image-lightbox.js"></script>
+    
+      <script src="../../assets/js/mathjax_inline_setup.js"></script>
     
       <script src="../../assets/js/mathjax.js"></script>
     
