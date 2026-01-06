@@ -370,7 +370,97 @@
             <div class="content-layout">
                 <div class="main-content">
                     <h1 id="how-to-do-a-u-substitution">How to do a u-substitution</h1>
-<p>Coming soon!</p>
+<p>Within the realm of integration, all techniques can be understood in terms of their differentiation counterparts. U-substitutions are no different, but the technique of which it is the inverse may not be immediately obvious. It is in fact the <strong>inverse chain rule</strong>, which we will explain below.</p>
+<h2 id="proof">Proof</h2>
+<p>The chain rule can be summarised as:</p>
+<p>$$<br>
+\frac{d}{dx} f(g(x)) = f’(g(x)) \times g’(x)<br>
+$$</p>
+<p>The nested functions can be confusing, so think of the $f’(g(x))$ as differentiating the outer function $f(x)$ with respect to the inner function $g(x)$. As an example:</p>
+<p>$$<br>
+\frac{d}{dx} sin(x^2)<br>
+$$</p>
+<p>We will differentiate the sine function with respect to $x^2$, giving $cos(x^2)$, and then we will multiply by $2x$:</p>
+<p>$$<br>
+= cos(x^2) \times 2x<br>
+$$</p>
+<p>This is important for u-substitution. Let’s consider integrating both sides of the chain rule expression:</p>
+<p>$$<br>
+\int \frac{d}{dx} f(g(x)) \ dx = \int f’(g(x)) \times g’(x) \ dx<br>
+$$</p>
+<p>Left hand side is an integral of a derivative, which just cancels down to $f(g(x))$. Switching LHS and RHS:</p>
+<p>$$<br>
+\int f’(g(x)) \times g’(x) \ dx = f(g(x))<br>
+$$</p>
+<p>And this is our u-substitution expression. We can see that to integrate a nested function, we need the derivative of the inside function $g’(x)$ on the end.</p>
+<p>To make things easier, we will <strong>substitute</strong> $u = g(x)$ when we solve questions like this; this is where the technique gets its name. But when we substitute $u$, we need to also substitute $du$, as we must integrate functions in terms of $u$ with respect to $u$, not $x$. This is done as follows:</p>
+<p>$$<br>
+\begin{equation} \label{eq1}<br>
+\begin{split}<br>
+g’(x) &amp; = \frac{d}{dx}u \\<br>
+g’(x)dx &amp; = du<br>
+\end{split}<br>
+\end{equation}<br>
+$$</p>
+<p>So thus our $du$ will ‘swallow up’ the derivative function $g’(x)$. Once we are in terms of $u$, we can integrate like any other function:</p>
+<p>$$<br>
+\begin{equation} \label{eq2}<br>
+\begin{split}<br>
+\int f’(u)du &amp; = f(u) + C<br>
+\end{split}<br>
+\end{equation}<br>
+$$</p>
+<p>We can then finally substitute $u = g(x)$ back in to our answer, to get it in terms of $x$:</p>
+<p>$$<br>
+f(u) + C = f(g(x)) + C<br>
+$$</p>
+<h2 id="example">Example</h2>
+<p>Lets consider:</p>
+<p>$$<br>
+\int xcos(x^2)dx<br>
+$$</p>
+<p>As we have nested functions, we will integrate by u-substitution. When we determine what to set $u$ to be, we must consider that we must have its derivative on the outside (remember that $g’(x)$ on the end). So let’s set it to be $x^2$:</p>
+<p>$$<br>
+\text{Let}\ u = x^2<br>
+$$</p>
+<p>Now we need to calculate the derivative of $u$ with respect to $x$:</p>
+<p>$$<br>
+\begin{equation} \label{eq3}<br>
+\begin{split}<br>
+\frac{du}{dx} &amp; = 2x \\<br>
+xdx &amp;= \frac{1}{2}\ du<br>
+\end{split}<br>
+\end{equation}<br>
+$$</p>
+<p>And finally we can substitute in to get a new integral in terms of $u$:</p>
+<p>$$<br>
+\begin{equation} \label{eq4}<br>
+\begin{split}<br>
+&amp; \int \frac{1}{2}cos(u)du \\<br>
+&amp; = \frac{1}{2}sin(u) + C \\<br>
+&amp; = \frac{1}{2}sin(x^2) + C<br>
+\end{split}<br>
+\end{equation}<br>
+$$</p>
+<h2 id="a-word-about-bounds">A word about bounds</h2>
+<p>This is where most students go wrong. If we have a <strong>definite</strong> integral (one which lower and upper bounds), we must write these in terms of $u$ as well. To do this, we subsitute the bounds for $x$ into our $u(x)$ function (the statement in which we let $u$ be some function of $x$) to compute our new bounds.</p>
+<p>For example, if the previous integral was actually:</p>
+<p>$$<br>
+\int^2_1 xcos(x^2)dx<br>
+$$</p>
+<p>Our new bounds would be, based on the statement $u = x^2$:</p>
+<p>$$<br>
+\begin{equation} \label{eq5}<br>
+\begin{split}<br>
+\text{Upper} = 2^2 = 4 \\<br>
+\text{Lower} = 1^2 = 1<br>
+\end{split}<br>
+\end{equation}<br>
+$$</p>
+<p>So our integral in terms of $u$ is now:</p>
+<p>$$<br>
+\int^4_1 \frac{1}{2}cos(u)du \\<br>
+$$</p>
 
                     
                     
@@ -404,11 +494,33 @@
                     
                 </div>
                 
-                <!-- DEBUG: {"headingsLength":1} -->
+                <!-- DEBUG: {"headingsLength":4} -->
                 
                 <!-- TOC sidebar -->
                 <div class="toc-sidebar">
                     
+
+  <div class="toc-container">
+    <h2 class="toc-title">On This Page<span class="mobile-view toc-menu-button float-right"><svg class="lucide-icon icon-chevrons-down-up" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m7 20 5-5 5 5" />
+  <path d="m7 4 5 5 5-5" />
+</svg></span></h2>
+    <ul class="toc-list">
+      
+        <li class="toc-item toc-level-2">
+          <a href="#proof" class="toc-link">Proof</a>
+        </li>
+      
+        <li class="toc-item toc-level-2">
+          <a href="#example" class="toc-link">Example</a>
+        </li>
+      
+        <li class="toc-item toc-level-2">
+          <a href="#a-word-about-bounds" class="toc-link">A word about bounds</a>
+        </li>
+      
+    </ul>
+  </div>
  
                 </div>
             </div>
@@ -424,7 +536,7 @@
         <footer class="page-footer">
             <div class="footer-content">
                 <div class="user-footer">
-                    © 2025 Tensor Tutoring.
+                    © 2026 Tensor Tutoring.
                 </div>
                 <div class="branding-footer">
                     Build with <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"></path><path d="m18 15-2-2"></path><path d="m15 18-2-2"></path></svg> <a href="https://github.com/mgks/docmd" target="_blank" rel="noopener">docmd.</a>
