@@ -10938,3 +10938,9 @@ dialog {
 .resource-link:active {
   transform: scale(1.01);
 }
+
+.fancy-highlighting {
+  background: -webkit-linear-gradient(45deg, #08c458, #49cafd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
