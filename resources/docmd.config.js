@@ -8,8 +8,8 @@ module.exports = {
 
   // Logo Configuration
   logo: {
-    light: '/assets/images/logo15.png', // Path relative to outputDir root
-    dark: '/assets/images/logo15.png',   // Path relative to outputDir root
+    light: '/assets/images/logo.png', // Path relative to outputDir root
+    dark: '/assets/images/logo.png',   // Path relative to outputDir root
     alt: 'Tensor Tutoring',                      // Alt text for the logo
     href: '/',                              // Link for the logo, defaults to site root
   },
