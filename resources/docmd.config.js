@@ -47,7 +47,7 @@ module.exports = {
     // '/assets/js/custom-script.js', // Paths relative to outputDir root
     '/assets/js/docmd-image-lightbox.js', // Image lightbox functionality
     '/assets/js/mathjax_inline_setup.js',
-    '/assets/js/mathjax.js'
+    '/assets/js/mathjax.js',
   ],
 
   // Content Processing
