@@ -10944,3 +10944,7 @@ dialog {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.special-card {
+  background: -webkit-linear-gradient(45deg, #ffffff, #fff5d9);
+}
